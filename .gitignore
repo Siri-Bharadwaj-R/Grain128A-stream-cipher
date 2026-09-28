@@ -1,0 +1,22 @@
+# Simulation outputs
+*.vcd
+*.out
+*.log
+
+# Compiled simulation files
+sim
+sim.out
+a.out
+
+# Tool-generated files
+*.bak
+*.tmp
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor files
+.vscode/
+.idea/
