@@ -57,6 +57,22 @@ The RTL design was synthesized using **Cadence Genus** and evaluated for:
 - Timing
 - Gate-level implementation
 
+## Synthesis Results
+
+The RTL design was synthesized using **Cadence Genus** with a 90 nm standard-cell library.
+
+| Metric | Result |
+|---|---:|
+| Cell Count | 1,359 |
+| Total Area | 28,447.949 |
+| Total Power | 1.78248 mW |
+| Critical Path Delay | 783 ps |
+| Setup Slack | 1 ps |
+| Clock Period | 1.05 ns |
+| Maximum Frequency | ≈ 952.38 MHz |
+
+The design achieved a **1 ps positive setup slack** at the specified 1.05 ns clock period.
+
 ### Synthesis Schematic
 
 ![Synthesis Schematic](docs/synthesis_schematic_top_module.jpg)
@@ -73,10 +89,32 @@ Detailed synthesis reports are available in the `reports/` directory:
 
 ## Repository Structure
 
-- `src/` — RTL design modules
-- `testbench/` — Verilog testbenches
-- `docs/` — Simulation and synthesis visualizations
-- `reports/` — Synthesis reports
+```text
+Grain128A-stream-cipher/
+├── src/
+│   ├── grain_128a_stream_cipher.v
+│   ├── sender.v
+│   ├── channel.v
+│   ├── receiver.v
+│   └── top.v
+├── testbench/
+│   ├── sender_tb.v
+│   ├── tb_channel.v
+│   ├── tb_grain_128a_stream_cipher.v
+│   ├── tb_receiver.v
+│   └── tb_top.v
+├── docs/
+│   ├── waveform_simulation.jpg
+│   ├── synthesis_schematic_top_module.jpg
+│   └── netlist_schematic_gatelevel.jpg
+├── reports/
+│   ├── area1.rpt
+│   ├── power1.rpt
+│   └── timing1.rpt
+├── .gitignore
+└── README.md
+
+```
 
 ## Tools
 
